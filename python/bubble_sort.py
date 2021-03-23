@@ -1,3 +1,12 @@
+"""
+bubble sort algorithm
+
+CASE1
+input : 1 9 6 2 4 3
+output : [1, 2, 3, 4, 6, 9]
+"""
+
+
 def bubble_sort(attrs=[]):
     for i in range(len(attrs)):
         for j in range(i + 1, len(attrs)):
