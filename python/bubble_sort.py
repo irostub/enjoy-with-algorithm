@@ -2,21 +2,21 @@
 bubble sort algorithm
 
 CASE1
-input : 1 9 6 2 4 3
-output : [1, 2, 3, 4, 6, 9]
+input : 1 9 5 4 6 7
+output : [1, 4, 5, 6, 7, 9]
 """
 
-
-def bubble_sort(attrs=[]):
-    for i in range(len(attrs)):
-        for j in range(i + 1, len(attrs)):
-            if attrs[i] > attrs[j]:
-                temp = attrs[i]
-                attrs[i] = attrs[j]
-                attrs[j] = temp
-    return attrs
+def bubble_sort(arr=[]):
+    for i in range(len(arr)-1):
+        for j in range(len(arr)-1, i, -1):
+            if arr[j - 1] > arr[j]:
+                temp = arr[j-1]
+                arr[j - 1] = arr[j]
+                arr[j] = temp
+    return arr
 
 
 if __name__ == '__main__':
-    nums = list(map(int, input().split()))
-    print(bubble_sort(nums))
+    inputArr = list(map(int, input().split()))
+    print(bubble_sort(inputArr))
+
